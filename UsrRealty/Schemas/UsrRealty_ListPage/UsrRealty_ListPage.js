@@ -22,32 +22,63 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				"operation": "merge",
 				"name": "DataTable",
 				"values": {
+					"columns": [
+						{
+							"id": "fe91d01e-af2b-f63e-1ecd-6eed6da32b4f",
+							"code": "PDS_UsrTitle",
+							"path": "UsrTitle",
+							"caption": "#ResourceString(PDS_UsrTitle)#",
+							"dataValueType": 28
+						},
+						{
+							"id": "07d3d456-1ed8-09ac-de88-be8bae0038d7",
+							"code": "PDS_UsrPriceUSD",
+							"path": "UsrPriceUSD",
+							"caption": "#ResourceString(PDS_UsrPriceUSD)#",
+							"dataValueType": 32
+						},
+						{
+							"id": "8dcea220-250a-7b55-a66c-b10e232a2b05",
+							"code": "PDS_UsrArea",
+							"path": "UsrArea",
+							"caption": "#ResourceString(PDS_UsrArea)#",
+							"dataValueType": 32
+						},
+						{
+							"id": "d98d4e17-d37f-4dba-64fd-9e728a40ef49",
+							"code": "PDS_UsrType",
+							"path": "UsrType",
+							"caption": "#ResourceString(PDS_UsrType)#",
+							"dataValueType": 10,
+							"referenceSchemaName": "UsrRealtyType"
+						},
+						{
+							"id": "5b18ccbf-3288-66d8-cf9d-4c9d77482759",
+							"code": "PDS_UsrTypeOffer",
+							"path": "UsrTypeOffer",
+							"caption": "#ResourceString(PDS_UsrTypeOffer)#",
+							"dataValueType": 10,
+							"referenceSchemaName": "UsrRealtyTypeOffer"
+						},
+						{
+							"id": "6605facf-f22e-82c9-f9d6-39d5b899c89f",
+							"code": "PDS_CreatedOn",
+							"path": "CreatedOn",
+							"caption": "#ResourceString(PDS_CreatedOn)#",
+							"dataValueType": 7
+						}
+					],
 					"layoutConfig": {
 						"basis": "100%",
 						"width": 300
 					},
-					"columns": [
-						{
-							"id": "f252f581-0ccf-44ac-b7c9-c00df2ad9919",
-							"code": "PDS_UsrName",
-							"caption": "#ResourceString(PDS_UsrName)#",
-							"dataValueType": 1
-						},
-						{
-							"id": "c8689d78-80ba-4e71-8cf2-fa478e3be5bc",
-							"code": "PDS_CreatedOn",
-							"caption": "#ResourceString(PDS_CreatedOn)#",
-							"dataValueType": 7
-						},
-						{
-							"id": "fd4b3485-a46e-4219-b775-adef1210fe51",
-							"code": "PDS_CreatedBy",
-							"caption": "#ResourceString(PDS_CreatedBy)#",
-							"dataValueType": 10
-						},
-					],
 					"primaryColumnName": "PDS_Id",
-					"sorting": "$ItemsSorting | crt.ToDataTableSortingConfig: 'Items'"
+					"sorting": "$ItemsSorting | crt.ToDataTableSortingConfig: 'Items'",
+					"selectedRows": "$DataTable_SelectedRows",
+					"_filterOptions": {
+						"expose": [],
+						"from": "DataTable_SelectedRows"
+					}
 				}
 			},
 			{
@@ -103,7 +134,7 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					},
 					"justifyContent": "start",
 					"gap": "medium",
-                    "alignItems": "center"
+					"alignItems": "center"
 				},
 				"parentName": "MainFilterContainer",
 				"propertyName": "items",
@@ -201,7 +232,9 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"layoutConfig": {
 						"width": 328.125
 					},
-					"classes": ["section-folder-tree"]
+					"classes": [
+						"section-folder-tree"
+					]
 				},
 				"parentName": "SectionContentWrapper",
 				"propertyName": "items",
@@ -210,9 +243,46 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfig: /**SCHEMA_VIEW_MODEL_CONFIG*/{
 			"attributes": {
-				"ItemsSorting": {},
 				"Items": {
-					"isCollection": true,
+					"viewModelConfig": {
+						"attributes": {
+							"PDS_UsrTitle": {
+								"modelConfig": {
+									"path": "PDS.UsrTitle"
+								}
+							},
+							"PDS_UsrPriceUSD": {
+								"modelConfig": {
+									"path": "PDS.UsrPriceUSD"
+								}
+							},
+							"PDS_UsrArea": {
+								"modelConfig": {
+									"path": "PDS.UsrArea"
+								}
+							},
+							"PDS_UsrType": {
+								"modelConfig": {
+									"path": "PDS.UsrType"
+								}
+							},
+							"PDS_UsrTypeOffer": {
+								"modelConfig": {
+									"path": "PDS.UsrTypeOffer"
+								}
+							},
+							"PDS_CreatedOn": {
+								"modelConfig": {
+									"path": "PDS.CreatedOn"
+								}
+							},
+							"PDS_Id": {
+								"modelConfig": {
+									"path": "PDS.Id"
+								}
+							}
+						}
+					},
 					"modelConfig": {
 						"path": "PDS",
 						"pagingConfig": {
@@ -231,32 +301,9 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 								"loadOnChange": true
 							}
 						]
-					},
-					"viewModelConfig": {
-						"attributes": {
-							"PDS_Id": {
-								"modelConfig": {
-									"path": 'PDS.Id',
-								}
-							},
-							"PDS_UsrName": {
-								"modelConfig": {
-									"path": "PDS.UsrName"
-								}
-							},
-							"PDS_CreatedOn": {
-								"modelConfig": {
-									"path": "PDS.CreatedOn"
-								}
-							},
-							"PDS_CreatedBy": {
-								"modelConfig": {
-									"path": "PDS.CreatedBy"
-								}
-							}
-						}
 					}
 				},
+				"ItemsSorting": {},
 				"FolderTree_visible": {
 					"value": false
 				},
@@ -345,7 +392,27 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"type": "crt.EntityDataSource",
 					"hiddenInPageDesigner": true,
 					"config": {
-						"entitySchemaName": "UsrRealty"
+						"entitySchemaName": "UsrRealty",
+						"attributes": {
+							"UsrTitle": {
+								"path": "UsrTitle"
+							},
+							"UsrPriceUSD": {
+								"path": "UsrPriceUSD"
+							},
+							"UsrArea": {
+								"path": "UsrArea"
+							},
+							"UsrType": {
+								"path": "UsrType"
+							},
+							"UsrTypeOffer": {
+								"path": "UsrTypeOffer"
+							},
+							"CreatedOn": {
+								"path": "CreatedOn"
+							}
+						}
 					},
 					"scope": "viewElement"
 				}

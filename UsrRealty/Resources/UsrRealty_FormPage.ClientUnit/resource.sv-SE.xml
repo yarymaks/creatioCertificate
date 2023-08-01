@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty form page" />
+			<Item Name="LocalizableStrings.FeedTabContainer_caption.Value" Value="ESN Flöde" />
 		</Items>
 	</Group>
 </Resources>

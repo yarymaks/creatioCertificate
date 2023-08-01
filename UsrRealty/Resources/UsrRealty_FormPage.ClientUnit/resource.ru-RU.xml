@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница записи Realty" />
+			<Item Name="LocalizableStrings.FeedTabContainer_caption.Value" Value="Лента" />
 		</Items>
 	</Group>
 </Resources>
