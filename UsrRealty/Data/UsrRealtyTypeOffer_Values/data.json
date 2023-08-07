@@ -8,11 +8,35 @@
         },
         {
           "SchemaColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
-          "Value": "\/Date(1690885654086+0200)\/"
+          "Value": "\/Date(1690899105829+0200)\/"
+        },
+        {
+          "SchemaColumnUId": "9c1e7ed2-0092-32a4-1ab7-bbd285670a39",
+          "Value": 0.5000
         },
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
           "Value": "\/Date(1690885654086+0200)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "cd28b244-8579-4741-85b1-74f19b8a66f7"
+        },
+        {
+          "SchemaColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
+          "Value": "\/Date(1690899109919+0200)\/"
+        },
+        {
+          "SchemaColumnUId": "9c1e7ed2-0092-32a4-1ab7-bbd285670a39",
+          "Value": 0.0200
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1690885675638+0200)\/"
         }
       ]
     }

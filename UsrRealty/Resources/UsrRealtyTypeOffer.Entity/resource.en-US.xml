@@ -3,7 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty type offer" />
-			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+			<Item Name="Columns.UsrCommissionMultiplier.Caption" Value="Commission multiplier, 0 to 1" />
 		</Items>
 	</Group>
 </Resources>

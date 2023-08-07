@@ -239,36 +239,6 @@
           "Value": "\/Date(1505934735923+0200)\/"
         }
       ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
-          "Value": "c10fb747-57f1-4790-aad3-c3f4da6d6c58",
-          "DisplayValue": "Studio"
-        },
-        {
-          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
-          "Value": "e8d7af02-7204-4185-a71b-e330eb6e2fbd",
-          "DisplayValue": "Realty"
-        },
-        {
-          "SchemaColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
-          "Value": "\/Date(1690882097841+0200)\/"
-        },
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "a74a2e8b-4210-43a2-be94-5a33071d698d"
-        },
-        {
-          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
-          "Value": 0
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1690882097841+0200)\/"
-        }
-      ]
     }
   ]
 }

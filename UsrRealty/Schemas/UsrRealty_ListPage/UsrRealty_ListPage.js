@@ -78,7 +78,15 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"_filterOptions": {
 						"expose": [],
 						"from": "DataTable_SelectedRows"
-					}
+					},
+					"visible": true,
+					"features": {
+						"editable": {
+							"enable": false,
+							"itemsCreation": false
+						}
+					},
+					"fitContent": true
 				}
 			},
 			{
@@ -289,7 +297,13 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"rowCount": 30
 						},
 						"sortingConfig": {
-							"attributeName": "ItemsSorting"
+							"attributeName": "ItemsSorting",
+							"default": [
+								{
+									"direction": "asc",
+									"columnName": "UsrTitle"
+								}
+							]
 						},
 						"filterAttributes": [
 							{
